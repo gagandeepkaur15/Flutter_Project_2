@@ -29,26 +29,28 @@ class MyHomePage extends StatelessWidget {
         ),
         backgroundColor: Color.fromARGB(255, 216, 141, 42),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(40),
-            padding: EdgeInsets.all(10),
-            child: Card(
-              color: Color.fromARGB(255, 234, 168, 69),
-              child: Text(
-                'CHART',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.all(40),
+              padding: EdgeInsets.all(10),
+              child: Card(
+                color: Color.fromARGB(255, 234, 168, 69),
+                child: Text(
+                  'CHART',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
+                elevation: 5,
               ),
-              elevation: 5,
             ),
-          ),
-          UserTransactions()
-        ],
+            UserTransactions()
+          ],
+        ),
       ),
     );
   }
